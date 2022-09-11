@@ -16,12 +16,17 @@
             rel="stylesheet"
         />
 
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"
-        integrity="sha512-Y0MM+V6ymRKN2zStTqzQ227DWhhp4Mzdo6gnlRnuaNCbc+YN/ZH0sBCLTM4M0oSy9c9VKiCvd4Jk44aCLrNS5Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"
+            integrity="sha512-Y0MM+V6ymRKN2zStTqzQ227DWhhp4Mzdo6gnlRnuaNCbc+YN/ZH0sBCLTM4M0oSy9c9VKiCvd4Jk44aCLrNS5Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
         <title>Studio</title>
         <link rel="stylesheet" href="css/styles.css" />
+        <script src="./js/modal.js"></script>
     </head>
     <body>
         <header>
@@ -82,8 +87,8 @@
                     <h3 class="title">
                         EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
                     </h3>
-                    <button type="button" class="box-frist">
-                        Złóż zamówienie
+                    <button type="button" class="box-frist" data-modal-open>
+                        Zamów usługę
                     </button>
                 </div>
             </section>
@@ -461,11 +466,7 @@
                     <ul class="our-client">
                         <li>
                             <a class="client-svg" href="">
-                                <svg
-                                    width="106"
-                                    height="60"
-                                    class="our-svg"
-                                >
+                                <svg width="106" height="60" class="our-svg">
                                     <use href="images/icons.svg#yoco"></use>
                                 </svg>
                             </a>
@@ -572,5 +573,19 @@
                 </div>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="backdrop-modal">
+                <button class="button-close" type="button" data-modal-close>
+                    <svg class="close">
+                        <use
+                            width="20"
+                            height="20"
+                            href="images/icons.svg#close"
+                        ></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </body>
 </html>

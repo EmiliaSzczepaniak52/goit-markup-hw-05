@@ -76,6 +76,9 @@ header {
 
 .logo-link:hover {
     color: var(--dark);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list {
@@ -104,6 +107,10 @@ header {
 
 .header_nav:hover .header_nav:focus {
     color: #646464;
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio {
     text-decoration: none;
@@ -113,6 +120,10 @@ header {
 .portfolio:hover {
     color: var(--blue);
     text-decoration: none;
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-nav {
     font-style: normal;
@@ -141,6 +152,10 @@ header {
 .link-address:focus {
     color: var(--blue);
     fill: var(--blue);
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item-head-main {
     height: 600px;
@@ -196,6 +211,10 @@ header {
     box-shadow: 0px 2px 2px 0px #0000001f;
     box-shadow: 0px 1px 2px 0px #00000014;
     box-shadow: 0px 3px 1px 0px #0000001a;
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .number {
@@ -207,6 +226,10 @@ header {
 .number:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .img {
@@ -263,9 +286,14 @@ header {
     justify-content: center;
     align-items: center;
 }
-.icon-social:hover {
+.icon-social:hover,
+.icon-social:focus {
     background-color: var(--blue);
     fill: var(--white);
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social {
     padding: 0 32px 0 32px;
@@ -292,15 +320,23 @@ header {
     fill: #afb1b8;
 }
 
-.our-svg:hover,
-.our-svg:focus {
-    border-color: var(--blue);
-    fill: var(--blue);
-}
 .client-svg:hover,
 .client-svg:focus {
     background-color: var(--white);
     border-color: var(--blue);
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.client-svg:hover,
+.client-svg:focus .our-svg {
+    background-color: var(--white);
+    border-color: var(--blue);
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-svg {
@@ -319,6 +355,9 @@ header {
 .footer-img {
     margin: auto;
     fill: #ffffff;
+}
+.close {
+    fill: #212121;
 }
 
 /* koniec svg */
@@ -549,3 +588,72 @@ h5 {
     text-transform: uppercase;
     color: #ffffff;
 }
+/* modal window */
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+.backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms ease, visibility 550ms ease;
+    /* animation-name: backdrop-open;
+  animation-duration: 3000ms; */
+}
+.backdrop-modal {
+    display: flex;
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.button-close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 9px;
+    cursor: pointer;
+ 
+}
+.backdrop-modal:active {
+    background-color: var(--blue);
+    transform: rotate(90deg);
+    transition-duration: 6000ms;
+}
+.close {
+    width: 20px;
+    height: 20px;
+    fill: #212121;
+}
+/* ------------ animations ------------ */
+/*@keyframes backdrop-open {
+  0% {
+    transform: scale(0.2);
+    background-color: transparent;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: transparent;
+  }
+  100% {
+    transform: scale(1);
+    background-color: transparent;
+  }
+} */
