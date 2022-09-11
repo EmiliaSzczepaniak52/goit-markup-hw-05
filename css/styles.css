@@ -123,6 +123,7 @@ ul {
     line-height: 1.14em;
     letter-spacing: 0.02em;
     color: var(--grey1);
+    text-decoration: none;
 }
 .contact-nav:nth-child(1) {
     padding-left: 351px;
