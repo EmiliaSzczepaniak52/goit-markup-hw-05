@@ -129,7 +129,7 @@ header {
     position: relative;
     color: var(--blue);
 }
-.nav-agency::after {
+.nav-agency:hover: {
     content: "";
     position: absolute;
     width: 53px;
@@ -389,7 +389,6 @@ header {
 .client-svg:focus {
     background-color: var(--white);
     border-color: var(--blue);
-    transform: translateY(100%);
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -398,10 +397,6 @@ header {
 .client-svg:focus .our-svg {
     background-color: var(--white);
     border-color: var(--blue);
-    transform: translateY(100%);
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-svg {
@@ -463,6 +458,9 @@ header {
 .box-frist:hover {
     cursor: pointer;
     background-color: var(--blue);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .feature {
     width: 1140px;
@@ -667,9 +665,8 @@ h5 {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.2);
     transition: opacity 250ms ease, visibility 550ms ease;
-    /* animation-name: backdrop-open;
-  animation-duration: 3000ms; */
 }
+
 .backdrop-modal {
     display: flex;
     position: absolute;
@@ -693,31 +690,14 @@ h5 {
     border-radius: 50%;
     background-color: var(--white);
     border: 2px solid rgba(0, 0, 0, 0.1);
-    padding: 9px;
     cursor: pointer;
 }
+
 .backdrop-modal:active {
     background-color: var(--blue);
     transform: rotate(90deg);
     transition-duration: 6000ms;
 }
 .close {
-    width: 20px;
-    height: 20px;
-    fill: #212121;
+    padding: 4px;
 }
-/* ------------ animations ------------ */
-/*@keyframes backdrop-open {
-  0% {
-    transform: scale(0.2);
-    background-color: transparent;
-  }
-  50% {
-    transform: scale(1.1);
-    background-color: transparent;
-  }
-  100% {
-    transform: scale(1);
-    background-color: transparent;
-  }
-} */
