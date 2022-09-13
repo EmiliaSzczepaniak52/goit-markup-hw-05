@@ -107,29 +107,31 @@ header {
 
 .header_nav:hover .header_nav:focus {
     color: #646464;
-    transform: translateY(100%);
-    transition-property: transform;
+
+    /* transition-property: transform;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .portfolio {
     text-decoration: none;
-    color: var(--black);
     font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    color: var(--black);
 }
 .portfolio:hover {
     color: var(--blue);
-    text-decoration: none;
-    transform: translateY(100%);
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* text-decoration: none; */
+/* transition-property: transform; */
+/* transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} */
 .nav-agency {
     position: relative;
-    color: var(--blue);
+    color: var(--black);
 }
-.nav-agency:hover: {
+.nav-agency:hover::after {
     content: "";
     position: absolute;
     width: 53px;
@@ -393,10 +395,8 @@ header {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.client-svg:hover,
-.client-svg:focus .our-svg {
-    background-color: var(--white);
-    border-color: var(--blue);
+.client-svg:hover .our-svg {
+    fill: var(--blue);
 }
 
 .footer-svg {
