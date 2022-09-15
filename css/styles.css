@@ -98,6 +98,10 @@ header {
     line-height: 1.14em;
     letter-spacing: 0.02em;
     align-items: center;
+    color: #546464;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item-list {
     width: 352px;
@@ -125,6 +129,11 @@ header {
 .nav-agency {
     position: relative;
     color: var(--black);
+    width: 53px;
+    border-bottom: 4px solid var(--white);
+    transition-property: border-bottom;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-agency:hover::after {
     content: "";
@@ -157,16 +166,15 @@ header {
 .link-address {
     color: var(--grey1);
     text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-address:hover,
 .link-address:focus {
     color: var(--blue);
     fill: var(--blue);
-    transform: translateY(100%);
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item-head-main {
     height: 600px;
@@ -375,7 +383,7 @@ header {
     fill: var(--grey1);
     padding-left: 32px;
     padding-top: 16px;
-    transition-property: border;
+    transition-property: border, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -387,6 +395,9 @@ header {
 .our-svg {
     margin: auto;
     fill: #afb1b8;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-svg:hover,
